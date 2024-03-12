@@ -3,6 +3,7 @@ import React, { useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
+import { useDrag } from "react-use-gesture";
 
 const projectsData = [
   {
@@ -79,21 +80,27 @@ const ProjectsSection = () => {
     animate: { y: 0, opacity: 1 },
   };
 
+  const handleDrag = useDrag(
+    ({ down, movement: [mx], direction: [xDir], velocity }) => {
+      if (down) {
+       
+        const scrollSpeed = 0.2; 
+        ref.current.scrollLeft -= mx * scrollSpeed;
+      }
+    },
+    {
+      axis: "x", // Enable horizontal panning
+    }
+  );
+
   return (
-    <section className= "xl:min-h-[900px] 2xl:min-h-[1060px]" id="projects">
-      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
+    <section className="xl:min-h-[900px] 2xl:min-h-[1060px]" id="projects" {...handleDrag()}>
+         <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
         My Projects
       </h2>
-      
-      <ul ref={ref} className="md:grid md:grid-cols-3 md:gap-12">
+      <div className="overflow-x-auto snap-x flex gap-14" style={{ overflowX: "hidden" }} ref={ref}>
         {filteredProjects.map((project, index) => (
-          <motion.li
-            key={index}
-            variants={cardVariants}
-            initial="initial"
-            animate={isInView ? "animate" : "initial"}
-            transition={{ duration: 0.3, delay: index * 0.4 }}
-          >
+          <div className="scroll-ml-6 flex-none w-100" style={{ width: "500px", height: "400px" }}>
             <ProjectCard
               key={project.id}
               title={project.title}
@@ -102,9 +109,9 @@ const ProjectsSection = () => {
               gitUrl={project.gitUrl}
               previewUrl={project.previewUrl}
             />
-          </motion.li>
+          </div>
         ))}
-      </ul>
+      </div>
     </section>
   );
 };

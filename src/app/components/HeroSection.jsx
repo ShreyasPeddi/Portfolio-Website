@@ -33,7 +33,7 @@ const HeroSection = () => {
 
       
       <div className="grid grid-cols-1 sm:grid-cols-12 py-20 px-16">
-        <div className="col-span-12">
+        <div className="col-span-12 py-10">
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -47,7 +47,7 @@ const HeroSection = () => {
             <p style = {subHeadingStyles} className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
               Software Engineering @ University of Waterloo
             </p>
-            <div className="socials flex flex-row gap-2 sm:justify-center lg:justify-start">
+        <div className="flex flex-row">
           <Link href="github.com">
             <Image src={GithubIcon} alt="Github Icon" />
           </Link>
