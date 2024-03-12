@@ -80,7 +80,7 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects">
+    <section className= "xl:min-h-[900px] 2xl:min-h-[1060px]" id="projects">
       <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
         My Projects
       </h2>

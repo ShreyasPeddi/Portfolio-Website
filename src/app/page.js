@@ -5,7 +5,7 @@ import EmailSection from "./components/EmailSection";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col bg-[#121212]" style={{ background: "linear-gradient(rgba(20, 20, 20, 0.8), rgba(20, 20, 30, 0.5))", backgroundSize: "cover", position: "relative" }}>
+    <main className="flex min-h-screen flex-col bg-[#121212]" style={{ background: "linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.5))", backgroundSize: "cover", position: "relative" }}>
        
       <HeroSection />
       
@@ -15,7 +15,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div style={{ background: "radial-gradient(rgba(20, 20, 20, 0.8), rgba(20, 20, 30, 0.5))", backgroundSize: "cover", position: "relative" }}>
+      <div style={{ background: "radial-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.5))", backgroundSize: "cover", position: "relative" }}>
         <div className="container mt-24 mx-auto px-12 py-4">
           <ProjectsSection />
         </div>
