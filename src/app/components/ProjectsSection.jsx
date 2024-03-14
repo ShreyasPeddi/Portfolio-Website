@@ -5,6 +5,8 @@ import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
 import { useDrag } from "react-use-gesture";
 
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+
 const projectsData = [
   {
     id: 1,
@@ -67,9 +69,6 @@ const ProjectsSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
-  const handleTagChange = (newTag) => {
-    setTag(newTag);
-  };
 
   const filteredProjects = projectsData.filter((project) =>
     project.tag.includes(tag)
@@ -93,24 +92,47 @@ const ProjectsSection = () => {
     }
   );
 
+  const handleScrollLeft = () => {
+    ref.current.scrollTo({
+      left: ref.current.scrollLeft - 330,
+      behavior: 'smooth'
+    });
+  };
+
+  const handleScrollRight = () => {
+    ref.current.scrollTo({
+      left: ref.current.scrollLeft + 330,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <section className="xl:min-h-[600px] 2xl:min-h-[760px]" id="projects" {...handleDrag()}>
          <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
         My Projects
       </h2>
-      <div className="overflow-x-auto snap-x flex gap-14" style={{ overflowX: "hidden" }} ref={ref}>
-        {filteredProjects.map((project, index) => (
-          <div className="scroll-ml-6 flex-none w-100" style={{ width: "500px", height: "400px" }}>
-            <ProjectCard
-              key={project.id}
-              title={project.title}
-              description={project.description}
-              imgUrl={project.image}
-              gitUrl={project.gitUrl}
-              previewUrl={project.previewUrl}
-            />
-          </div>
-        ))}
+      <div className="flex justify-center items-center mb-4">
+        <div className="pr-10">
+          <FaArrowLeft className="cursor-pointer" size = {50} onClick={handleScrollLeft} />
+        </div>
+        
+        <div className="overflow-x-auto snap-x flex gap-14" style={{ overflowX: "hidden" }} ref={ref}>
+          {filteredProjects.map((project, index) => (
+            <div className="scroll-ml-6 flex-none w-100" style={{ width: "500px", height: "400px" }}>
+              <ProjectCard
+                key={project.id}
+                title={project.title}
+                description={project.description}
+                imgUrl={project.image}
+                gitUrl={project.gitUrl}
+                previewUrl={project.previewUrl}
+              />
+            </div>
+          ))}
+        </div>
+        <div className="pl-10">
+        <FaArrowRight className="cursor-pointer" size = {50} onClick={handleScrollRight} />
+        </div>
       </div>
     </section>
   );
