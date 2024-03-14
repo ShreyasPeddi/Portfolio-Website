@@ -4,8 +4,7 @@ import Image from "next/image";
 
 const AboutSection = () => {
   const subHeadingStyles = {
-    fontWeight: '500',
-    color: 'rgba(234, 234, 234, 1)',
+    fontWeight: '600',
   };
   const paragraphStyle = {
     
@@ -21,8 +20,8 @@ const AboutSection = () => {
           <Image src="/images/headshot.jpeg" width={400} height={400} className="w-100 h-100 rounded-full border-2 border-black" />
         </div>
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full pt-8">
-          <h2 className="text-3xl font-bold text-white mb-4 font-sans" style={subHeadingStyles}>Hey There!</h2>
-          <p style = {paragraphStyle} className="text-base lg:text-lg mt-8 font-sans text-base/loose ">
+          <h2 className="text-5xl font-bold text-white mb-4 font-sans" style={subHeadingStyles}>Hey There!</h2>
+          <p style = {paragraphStyle} className="text-base lg:text-xl mt-8 font-sans text-wrap text-pretty text-base/loose ">
             I am a full stack web developer with a passion for creating
             interactive and responsive web applications. I have experience
             working with JavaScript, React, Redux, Node.js, Express, PostgreSQL,
