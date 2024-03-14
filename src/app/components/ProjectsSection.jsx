@@ -94,7 +94,7 @@ const ProjectsSection = () => {
   );
 
   return (
-    <section className="xl:min-h-[900px] 2xl:min-h-[1060px]" id="projects" {...handleDrag()}>
+    <section className="xl:min-h-[600px] 2xl:min-h-[760px]" id="projects" {...handleDrag()}>
          <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
         My Projects
       </h2>
