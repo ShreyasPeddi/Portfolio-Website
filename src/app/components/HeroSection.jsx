@@ -18,7 +18,6 @@ const HeroSection = () => {
   const subHeadingStyles = {
     fontFamily: 'Arial, sans-serif',
     fontWeight: '500',
-    color: 'rgba(194, 194, 194, 1)',
 
   };
 
@@ -36,7 +35,7 @@ const HeroSection = () => {
             
               I'm Shreyas Peddi.
             </h1>
-            <h2 style = {subHeadingStyles} className="text-white text-2xl sm:text-3xl lg:text-4xl">
+            <h2 style = {subHeadingStyles} className="text-[#ADB7BE] text-2xl sm:text-3xl lg:text-4xl">
             <TypeAnimation
               sequence={[
                 "Software Developer",
