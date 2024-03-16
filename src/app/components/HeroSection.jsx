@@ -26,9 +26,10 @@ const HeroSection = () => {
       <div className="grid grid-cols-1 sm:grid-cols-12 py-40 px-24">
         <div className="col-span-12">
           <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
+            initial={{ opacity: 0, scale: 1 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
+            exit={{ opacity: 0, scale: 0.5}}
+            transition={{ duration: 0.8 }}
             className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
           >
             <h1 style = {headingStyles} className="text-white mb-4 text-4xl sm:text-5xl lg:pt-20 2xl:pt-24 lg:text-8xl lg:leading-normal">
