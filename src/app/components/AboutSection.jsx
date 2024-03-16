@@ -1,6 +1,7 @@
 "use client";
 import React, { useTransition, useState } from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const AboutSection = () => {
   const subHeadingStyles = {
@@ -14,7 +15,13 @@ const AboutSection = () => {
   };
   return (
     <section className="text-white xl:min-h-[530px] 2xl:min-h-[560px]" id="about" >
-
+       <motion.div
+            initial={{ opacity: 0, scale: 1 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.5}}
+            transition={{ duration: 0.7 }}
+            className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
+          >
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-1 sm:py-16 xl:px-16 xl:py-9">
         <div className="rounded-full overflow-hidden">
           <Image src="/images/headshot.jpeg" width={400} height={400} className="w-100 h-100 rounded-full border-2 border-black" />
@@ -30,12 +37,11 @@ const AboutSection = () => {
             I am excited to work with others to create amazing applications.
           </p>
           
-          
         </div>
       </div>
+      </motion.div>
     </section>
   );
 };
 
 export default AboutSection;
-
