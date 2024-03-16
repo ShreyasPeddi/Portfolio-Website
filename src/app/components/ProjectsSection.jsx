@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
-import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
 import { useDrag } from "react-use-gesture";
 
@@ -113,12 +112,12 @@ const ProjectsSection = () => {
       </h2>
       <div className="flex justify-center items-center mb-4">
         <div className="pr-10">
-          <FaArrowLeft className="cursor-pointer" size = {50} onClick={handleScrollLeft} />
+          <FaArrowLeft className="cursor-pointer w-5 h-5 xl:w-7 xl:h-7" onClick={handleScrollLeft} />
         </div>
         
         <div className="overflow-x-auto snap-x flex gap-14" style={{ overflowX: "hidden" }} ref={ref}>
           {filteredProjects.map((project, index) => (
-            <div className="scroll-ml-6 flex-none w-100" style={{ width: "500px", height: "400px" }}>
+            <div className="scroll-ml-6 flex-none" style={{ width: "500px", height: "400px" }}>
               <ProjectCard
                 key={project.id}
                 title={project.title}
@@ -131,7 +130,7 @@ const ProjectsSection = () => {
           ))}
         </div>
         <div className="pl-10">
-        <FaArrowRight className="cursor-pointer" size = {50} onClick={handleScrollRight} />
+        <FaArrowRight className="cursor-pointer w-5 h-5 xl:w-7 xl:h-7" onClick={handleScrollRight} />
         </div>
       </div>
     </section>
