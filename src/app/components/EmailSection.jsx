@@ -22,7 +22,7 @@ const EmailSection = () => {
           </h2>
         </div>
 
-        <div className="bg-gray-200 p-3 xl:p-8 mt-10 xl:w-90 rounded-full border border-radius border-gray-300">
+        <div className="bg-gray-200 p-3 xl:p-8 mt-10 xl:w-90 rounded-3xl border border-radius border-gray-300">
           <div className="flex flex-col xl:flex-row gap-2 justify-center md:justify-start">
             <div className="pl-2"></div>
             <div className="pt-2 flex flex-row gap-2 px-10 xl:px-0">
@@ -45,7 +45,7 @@ const EmailSection = () => {
             <div className="pt-2 flex flex-row gap-2 justify-center">
               <Link href="linkedin.com">
                 <Image
-                  className=""
+                  className="w-3/4 md:w-full"
                   src={LinkedinDarkIcon}
                   width={45}
                   alt="Linkedin Icon"

@@ -92,15 +92,20 @@ const ProjectsSection = () => {
   );
 
   const handleScrollLeft = () => {
+   
+    var scrollAmount = 330;
+    if (window.innerWidth < 768) {scrollAmount = 240;}
     ref.current.scrollTo({
-      left: ref.current.scrollLeft - 330,
+      left: ref.current.scrollLeft - scrollAmount,
       behavior: 'smooth'
     });
   };
 
   const handleScrollRight = () => {
+    var scrollAmount = 330;
+    if (window.innerWidth < 768) {scrollAmount = 240;}
     ref.current.scrollTo({
-      left: ref.current.scrollLeft + 330,
+      left: ref.current.scrollLeft + scrollAmount,
       behavior: 'smooth'
     });
   };
@@ -115,9 +120,9 @@ const ProjectsSection = () => {
           <FaArrowLeft className="cursor-pointer w-5 h-5 xl:w-7 xl:h-7" onClick={handleScrollLeft} />
         </div>
         
-        <div className="overflow-x-auto snap-x flex gap-14" style={{ overflowX: "hidden" }} ref={ref}>
+        <div className="overflow-x-auto snap-x flex gap-10 lg:gap-15 xl:gap-20" style={{ overflowX: "hidden" }} ref={ref}>
           {filteredProjects.map((project, index) => (
-            <div className="scroll-ml-6 flex-none" style={{ width: "500px", height: "400px" }}>
+            <div className="scroll-ml-6 flex-none w-full xl:w-1/2">
               <ProjectCard
                 key={project.id}
                 title={project.title}
