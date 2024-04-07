@@ -23,7 +23,7 @@ const HeroSection = () => {
 
   return (
     <section className="relative xl:min-h-[830px] 2xl:min-h-[960px]">
-      <ParticlesContainer /> 
+      
       <div className="absolute inset-0 z-10 grid grid-cols-1 sm:grid-cols-12 py-40 px-24">
         <div className="col-span-12">
           <motion.div
