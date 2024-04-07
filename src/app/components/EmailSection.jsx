@@ -22,11 +22,11 @@ const EmailSection = () => {
           </h2>
         </div>
 
-        <div className="bg-gray-200 p-3 xl:p-8 mt-10 xl:w-90 rounded-3xl border border-radius border-gray-300">
+        <div className="bg-gray-200 p-3 xl:p-8 mt-10 xl:w-90 rounded-3xl border border-radius border-gray-300 opacity-100">
           <div className="flex flex-col xl:flex-row gap-2 justify-center md:justify-start">
             <div className="pl-2"></div>
             <div className="pt-2 flex flex-row gap-2 px-10 xl:px-0">
-              <Link href="email.com">
+              <Link href="mailto:srpeddi@uwaterloo.ca">
                 <Image
                   src={EmailDarkIcon}
                   width={50}
@@ -43,7 +43,7 @@ const EmailSection = () => {
 
             <div className="xl:pl-5"></div>
             <div className="pt-2 flex flex-row gap-2 justify-center">
-              <Link href="linkedin.com">
+              <Link href="https://www.linkedin.com/in/shreyaspeddi/" target="_blank">
                 <Image
                   className="w-3/4 md:w-full"
                   src={LinkedinDarkIcon}

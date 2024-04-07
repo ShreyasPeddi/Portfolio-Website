@@ -3,6 +3,11 @@ import AboutSection from "./components/AboutSection";
 import ProjectsSection from "./components/ProjectsSection";
 import EmailSection from "./components/EmailSection";
 import Timeline from "./components/WorkSection";
+import ParticlesContainer from "./components/ParticlesContainer";
+import { FaCarAlt, FaUniversity, FaMoneyBill } from 'react-icons/fa';
+import { GiArtificialIntelligence } from "react-icons/gi";
+import { BiSolidSchool } from "react-icons/bi";
+
 
 export default function Home() {
   const experiences = [
@@ -10,49 +15,52 @@ export default function Home() {
       role: "Software Engineer Intern",
       company: "Gryd",
       date: "Jan 2024 - April 2024",
-      description: "Worked on GrydPark, Canada's first B2C/B2B Parking Marketplace and Management Platform",
+      description:
+        "Developed core features in GrydPark, Canada's first B2C/B2B Parking Marketplace and Management Platform",
+      icon: <FaCarAlt />,
     },
     {
-      role: "Machine Learning Research Assistant",
+      role: "Research Assistant",
       company: "Univerity of Waterloo, Dean's Office",
       date: "Mar 2024 - Present",
-      description: "Developing an AI powered advising system for course recommendations and student advising",
+      description:
+        "Building an AI powered advising system for course recommendations and student advising",
+        icon: <FaUniversity />,
     },
     {
       role: "Software Engineer Intern",
       company: "Northbridge Financial Corp.",
       date: "May 2023 - August 2023",
-      description: "Developed insurance and integration solutions catering to customer base of over 10000 users",
+      description:
+        "Developed insurance solutions catering to customer base of over 10,000+ users",
+        icon: <FaMoneyBill />,
     },
     {
       role: "Machine Learning Researcher",
-      company: "Wat.AI",
+      company: "Wat.AI - UWaterloo Artificial Intelligence Team",
       date: "March 2023 - December 2023",
-      description: "Created a sound anomaly detection system with Transformer models",
+      description:
+        "Created a sound anomaly detection system with Transformer models",
+        icon: <GiArtificialIntelligence />,
     },
     {
       role: "Software Developer Intern",
       company: "DataReady Teachnology",
       date: "June 2021 - August 2021",
-      description: "Worked on stuff",
+      description: "Worked on the SmartSchool platform, a SaaS product for schools and universities",
+      icon: <BiSolidSchool />,
     },
   ];
   return (
     <main className="flex min-h-screen flex-col bg-[#121212] mx-auto">
-      <div
-        style={{
-          background: "radial-gradient(rgba(20, 20, 20, 1), rgba(20,20,20,1))",
-          backgroundSize: "cover",
-          position: "relative",
-        }}
-      >
-        <HeroSection />
+      <div style={{ position: "relative", width: "100%", height: "100vh" }}>
+        <HeroSection style={{ zIndex: 10 }} /> {/* Set higher zIndex */}
       </div>
-
+      
       <div
         className
         style={{
-          background: "radial-gradient(rgba(30, 30, 30, 1), rgba(30,30,30,1))",
+          background: "radial-gradient(rgba(27, 27, 27, 0.9),rgba(27, 27, 27, 0.9))",
           backgroundSize: "cover",
           position: "relative",
         }}
@@ -65,31 +73,31 @@ export default function Home() {
 
       <div
         style={{
-          background: "radial-gradient(rgba(20, 20, 20, 1), rgba(20,20,20,1))",
+          background: "radial-gradient(rgba(18, 18, 18, 0.9),rgba(18, 18, 18, 0.9))",
           backgroundSize: "cover",
           position: "relative",
         }}
       >
-         <div className="container mt-24 mx-auto px-12 py-4">
+        <div className="container mt-30 mb-24 py-10 mx-auto px-12">
           <Timeline experiences={experiences} />
         </div>
       </div>
 
       <div
-        style={{
-          background: "radial-gradient(rgba(20, 20, 20, 1), rgba(20,20,20,1))",
+        style={{ 
+          background: "radial-gradient(rgba(27, 27, 27, 0.9),rgba(27, 27, 27, 0.9))",
           backgroundSize: "cover",
           position: "relative",
         }}
       >
-        <div className="container mt-24 mx-auto px-12 py-4">
+        <div className="container mt-28 mb-20 mx-auto py-4">
           <ProjectsSection />
         </div>
       </div>
 
       <div
         style={{
-          background: "radial-gradient(rgba(30, 30, 30, 1), rgba(30,30,30,1))",
+          background: "radial-gradient(rgba(18, 18, 18, 0.1),rgba(18, 18, 18, 0.1))",
           backgroundSize: "cover",
           position: "relative",
         }}

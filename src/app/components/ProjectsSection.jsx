@@ -9,69 +9,78 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 const projectsData = [
   {
     id: 1,
-    title: "React Portfolio Website",
+    title: "Solana Rewards",
     description: "Project 1 description",
-    image: "/images/projects/1.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
+    image: "/images/projects/SolanaRewards.png",
+    gitUrl: "https://devpost.com/software/solana-rewards",
     previewUrl: "/",
   },
   {
     id: 2,
-    title: "Potography Portfolio Website",
+    title: "Liber: Hands-Free Social Media",
     description: "Project 2 description",
-    image: "/images/projects/2.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
+    image: "/images/projects/Liber.png",
+    gitUrl: "https://devpost.com/software/liber-hands-free",
     previewUrl: "/",
   },
   {
     id: 3,
-    title: "E-commerce Application",
+    title: "Blockaoke: Blockchain + Karaoke",
     description: "Project 3 description",
-    image: "/images/projects/3.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
+    image: "/images/projects/Blockaoke.png",
+    gitUrl: "https://ethglobal.com/showcase/blockaoke-unsoh",
     previewUrl: "/",
   },
   {
     id: 4,
-    title: "Food Ordering Application",
+    title: "Guido: Autonomous Vacuum Cleaner",
     description: "Project 4 description",
-    image: "/images/projects/4.png",
-    tag: ["All", "Mobile"],
-    gitUrl: "/",
+    image: "/images/projects/Guido.jpg",
+    gitUrl: "https://github.com/ShreyasPeddi/Guido_SE101",
     previewUrl: "/",
   },
   {
     id: 5,
-    title: "React Firebase Template",
+    title: "Virtual Screening of Bioassay Data",
     description: "Authentication and CRUD operations",
-    image: "/images/projects/5.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
+    image: "/images/projects/fractal.jpeg",
+    gitUrl: "https://github.com/ShreyasPeddi/pharmahacks2023-submission",
     previewUrl: "/",
   },
   {
     id: 6,
-    title: "Full-stack Roadmap",
+    title: "Fractal Patterns",
     description: "Project 5 description",
-    image: "/images/projects/6.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
+    image: "/images/projects/fractal.jpeg",
+    gitUrl: "https://github.com/ShreyasPeddi/Fractal-Patterns",
+    previewUrl: "/",
+  },
+
+  {
+    id: 7,
+    title: "Notivity",
+    description: "Project 5 description",
+    image: "/images/projects/notivity.jpeg",
+    gitUrl: "https://github.com/ShreyasPeddi/Notivity",
+    previewUrl: "/",
+  },
+
+  {
+    id: 8,
+    title: "Labyrinth Board Game",
+    description: "Project 5 description",
+    image: "/images/projects/notivity.jpeg",
+    gitUrl: "https://github.com/ShreyasPeddi/Labyrinth-Board-Game",
     previewUrl: "/",
   },
 ];
 
 const ProjectsSection = () => {
-  const [tag, setTag] = useState("All");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
 
-  const filteredProjects = projectsData.filter((project) =>
-    project.tag.includes(tag)
-  );
+  const filteredProjects = projectsData
 
   const cardVariants = {
     initial: { y: 50, opacity: 0 },
@@ -111,18 +120,18 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section className="xl:min-h-[600px] 2xl:min-h-[760px]" id="projects" {...handleDrag()}>
-         <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
+    <section className="xl:min-h-[600px] 2xl:min-h-[660px]" id="projects" {...handleDrag()}>
+      <h2 className="text-center text-5xl font-bold text-white mb-8 md:mb-16">
         My Projects
       </h2>
-      <div className="flex justify-center items-center mb-4">
+      <div className="flex justify-center items-center">
         <div className="pr-10">
           <FaArrowLeft className="cursor-pointer w-5 h-5 xl:w-7 xl:h-7" onClick={handleScrollLeft} />
         </div>
         
-        <div className="overflow-x-auto snap-x flex gap-10 lg:gap-15 xl:gap-20" style={{ overflowX: "hidden" }} ref={ref}>
+        <div className="overflow-x-auto snap-x flex gap-10 xl:gap-20" style={{ overflowX: "hidden" }} ref={ref}>
           {filteredProjects.map((project, index) => (
-            <div className="scroll-ml-6 flex-none w-full xl:w-1/2">
+            <div key = {project.id} className="scroll-ml-6 flex-none w-full xl:w-1/2 2xl:w-2/5">
               <ProjectCard
                 key={project.id}
                 title={project.title}

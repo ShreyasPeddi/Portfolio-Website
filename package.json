@@ -11,6 +11,8 @@
   "dependencies": {
     "@fontsource/open-sans": "^5.0.26",
     "@heroicons/react": "^2.0.18",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.3.0",
     "autoprefixer": "10.4.15",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.15",
