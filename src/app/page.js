@@ -69,7 +69,7 @@ export default function Home() {
       <ParticlesContainer onParticlesLoaded={handleParticlesLoaded} />
       {loading ? (
         <div className="flex justify-center items-center h-screen">
-          <ClipLoader
+          <PropogateLoader
             color="#FFFFF"     // white color
             loading={loading}
             size={150}
