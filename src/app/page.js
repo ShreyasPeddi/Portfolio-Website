@@ -9,8 +9,7 @@ import ParticlesContainer from "./components/ParticlesContainer";
 import { FaCarAlt, FaUniversity, FaMoneyBill } from "react-icons/fa";
 import { GiArtificialIntelligence } from "react-icons/gi";
 import { BiSolidSchool } from "react-icons/bi";
-import PropogateLoader from "react-spinners/PropagateLoader";
-import ClipLoader from "react-spinners/ClipLoader";
+import PropagateLoader from "react-spinners/PropagateLoader";
 
 
 export default function Home() {
@@ -69,12 +68,11 @@ export default function Home() {
       <ParticlesContainer onParticlesLoaded={handleParticlesLoaded} />
       {loading ? (
         <div className="flex justify-center items-center h-screen">
-          <PropogateLoader
-            color="#FFFFF"     // white color
+          <PropagateLoader
+          // white color
+            color="#fff"     
             loading={loading}
-            size={150}
-            aria-label="Loading Spinner"
-            data-testid="loader"
+            size={20}
           />
         </div>
       ):
