@@ -24,7 +24,7 @@ const AboutSection = () => {
         <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-1 sm:py-16 xl:px-16 xl:py-9">
           <div className="rounded-xl overflow-hidden relative">
             {/* Adjusted width and height */}
-            <Image src="/images/shreyas_pic.png" width={400} height={300} className="w-full h-full rounded-xl border-2 border-black hover:scale-105 transition-transform duration-300" />
+            <Image src="/images/speddi.png" width={400} height={300} className="w-full h-full rounded-xl border-2 border-black hover:scale-105 transition-transform duration-300" />
           </div>
           <div className="mt-4 ml-10 xl:ml-20 md:mt-0 text-left flex flex-col h-full pt-8">
             <h2 className="text-5xl font-bold text-white mb-4 font-sans" style={subHeadingStyles}>Hey There!</h2>
