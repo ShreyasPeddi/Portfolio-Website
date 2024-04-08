@@ -1,8 +1,9 @@
 "use client";
 import React, { useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
-import { motion, useInView } from "framer-motion";
+import { useInView } from "framer-motion";
 import { useDrag } from "react-use-gesture";
+import { motion, useTransform, useScroll } from "framer-motion";
 
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
@@ -79,8 +80,7 @@ const ProjectsSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
-
-  const filteredProjects = projectsData
+  const filteredProjects = projectsData;
 
   const cardVariants = {
     initial: { y: 50, opacity: 0 },
@@ -90,8 +90,7 @@ const ProjectsSection = () => {
   const handleDrag = useDrag(
     ({ down, movement: [mx], direction: [xDir], velocity }) => {
       if (down) {
-       
-        const scrollSpeed = 0.2; 
+        const scrollSpeed = 0.4;
         ref.current.scrollLeft -= mx * scrollSpeed;
       }
     },
@@ -100,36 +99,17 @@ const ProjectsSection = () => {
     }
   );
 
-  const handleScrollLeft = () => {
-   
-    var scrollAmount = 330;
-    if (window.innerWidth < 768) {scrollAmount = 240;}
-    ref.current.scrollTo({
-      left: ref.current.scrollLeft - scrollAmount,
-      behavior: 'smooth'
-    });
-  };
-
-  const handleScrollRight = () => {
-    var scrollAmount = 330;
-    if (window.innerWidth < 768) {scrollAmount = 240;}
-    ref.current.scrollTo({
-      left: ref.current.scrollLeft + scrollAmount,
-      behavior: 'smooth'
-    });
-  };
-
   return (
-    <section className="xl:min-h-[600px] 2xl:min-h-[660px]" id="projects" {...handleDrag()}>
-      <h2 className="text-center text-5xl font-bold text-white mb-8 md:mb-16">
+    <section
+      className="xl:min-h-[600px] 2xl:min-h-[660px]"
+      id="projects"
+      
+    >
+      <h2 className="text-center text-4xl md:text-5xl font-bold text-white">
         My Projects
       </h2>
-      <div className="flex justify-center items-center">
-        <div className="pr-10">
-          <FaArrowLeft className="cursor-pointer w-5 h-5 xl:w-7 xl:h-7" onClick={handleScrollLeft} />
-        </div>
-        
-        <div className="overflow-x-auto snap-x flex gap-10 xl:gap-20" style={{ overflowX: "hidden" }} ref={ref}>
+
+      {/* <div className="overflow-x-auto snap-x flex gap-10 xl:gap-20" style={{ overflowX: "hidden" }} ref={ref}>
           {filteredProjects.map((project, index) => (
             <div key = {project.id} className="scroll-ml-6 flex-none w-full xl:w-1/2 2xl:w-2/5">
               <ProjectCard
@@ -142,10 +122,36 @@ const ProjectsSection = () => {
               />
             </div>
           ))}
-        </div>
-        <div className="pl-10">
-        <FaArrowRight className="cursor-pointer w-5 h-5 xl:w-7 xl:h-7" onClick={handleScrollRight} />
-        </div>
+        </div> */}
+      <HorizontalScrollCarousel />
+    </section>
+  );
+};
+const HorizontalScrollCarousel = () => {
+  const targetRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+  });
+
+  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
+
+  return (
+    <section ref={targetRef} className="relative h-[300vh] bg-neutral-900">
+      <div className="sticky top-0 flex h-screen items-center overflow-hidden">
+        <motion.div style={{ x }} className="flex gap-4">
+          {projectsData.map((project) => {
+            return (
+              <ProjectCard
+                key={project.id}
+                title={project.title}
+                description={project.description}
+                imgUrl={project.image}
+                gitUrl={project.gitUrl}
+                previewUrl={project.previewUrl}
+              />
+            );
+          })}
+        </motion.div>
       </div>
     </section>
   );
