@@ -27,7 +27,7 @@ const AboutSection = () => {
             <Image src="/images/speddi.png" width={400} height={300} className="w-full h-full rounded-xl border-2 border-black hover:scale-105 transition-transform duration-300" />
           </div>
           <div className="mt-4 ml-10 xl:ml-20 md:mt-0 text-left flex flex-col h-full pt-8">
-            <h2 className="text-5xl font-bold text-white mb-4 font-sans" style={subHeadingStyles}>Hey There!</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-sans" style={subHeadingStyles}>Hey There!</h2>
             <p style={paragraphStyle} className="text-base lg:text-xl mt-8 font-sans text-wrap text-pretty text-base/loose">
             I am a Software Engineering student at the University of Waterloo. I am passionate about building software that solves real-world problems.
 
