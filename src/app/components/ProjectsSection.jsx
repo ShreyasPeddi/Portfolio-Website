@@ -11,7 +11,8 @@ const projectsData = [
   {
     id: 1,
     title: "Solana Rewards",
-    description: "Project 1 description",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pien, non fermentum ex interdum eget. ",
     image: "/images/projects/SolanaRewards.png",
     gitUrl: "https://devpost.com/software/solana-rewards",
     previewUrl: "/",
@@ -19,7 +20,8 @@ const projectsData = [
   {
     id: 2,
     title: "Liber: Hands-Free Social Media",
-    description: "Project 2 description",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus, est quis mattis lobortis, tortor leo sodales libero, interdum eleifend turpis ipsum vitae sem. Mauris ullamcorper dui sapien, non fermentum ex interdum eget. Nam libero est, hendrerit eu sodales quis, iaculis eu risus. Nulla condimentum ex est, vel posuere nulla accumsan a. Nulla vel ex sed dolor porttitor faucibus eu vitae mi. Vestibulum eu laoreet nisi. Mauris volutpat mauris vel pulvinar gravida. Duis dignissim eget justo vel euismod. Proin erat justo, imperdiet et venenatis at, dignissim eget eros. Maecenas commodo mauris ac sapien sollicitudin hendrerit. Proin elementum, tortor hendrerit vulputate tempus, nisi felis hendrerit ligula, in rutrum ipsum augue ac lectus. Vestibulum finibus neque ut odio finibus, eu pulvinar odio sollicitudin. Phasellus quis nulla at odio auctor rhoncus. Nam condimentum accumsan efficitur. Quisque auctor nec ante eu facilisis.",
     image: "/images/projects/Liber.png",
     gitUrl: "https://devpost.com/software/liber-hands-free",
     previewUrl: "/",
@@ -100,15 +102,7 @@ const ProjectsSection = () => {
   );
 
   return (
-    <section
-      className="xl:min-h-[600px] 2xl:min-h-[660px]"
-      id="projects"
-      
-    >
-      <h2 className="text-center text-4xl md:text-5xl font-bold text-white">
-        My Projects
-      </h2>
-
+    <section className="xl:min-h-[600px] 2xl:min-h-[660px]" id="projects">
       {/* <div className="overflow-x-auto snap-x flex gap-10 xl:gap-20" style={{ overflowX: "hidden" }} ref={ref}>
           {filteredProjects.map((project, index) => (
             <div key = {project.id} className="scroll-ml-6 flex-none w-full xl:w-1/2 2xl:w-2/5">
@@ -137,24 +131,26 @@ const HorizontalScrollCarousel = () => {
 
   return (
     <section ref={targetRef} className="relative h-[300vh] bg-neutral-900">
-      <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-        <motion.div style={{ x }} className="flex gap-4">
-          {projectsData.map((project) => {
-            return (
-             
-              
-              <ProjectCard
-                key={project.id}
-                title={project.title}
-                description={project.description}
-                imgUrl={project.image}
-                gitUrl={project.gitUrl}
-              />
-             
-            );
-          })}
-        </motion.div>
-      </div>
+      
+        <h2 className="text-center text-4xl md:text-5xl font-bold text-white">
+          My Projects
+        </h2>
+        <div className="sticky top-0 flex h-screen items-center overflow-hidden">
+          <motion.div style={{ x }} className="flex gap-4">
+            {projectsData.map((project) => {
+              return (
+                <ProjectCard
+                  key={project.id}
+                  title={project.title}
+                  description={project.description}
+                  imgUrl={project.image}
+                  gitUrl={project.gitUrl}
+                />
+              );
+            })}
+          </motion.div>
+        </div>
+      
     </section>
   );
 };

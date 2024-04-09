@@ -186,7 +186,7 @@ export default function Home() {
               position: "relative",
             }}
           >
-            <div className="container mt-28 mb-20 mx-auto py-4">
+            <div className="mt-28 mb-20 mx-auto py-4">
             <ProjectsSection />
             </div>
           </div>
