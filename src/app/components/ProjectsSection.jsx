@@ -141,14 +141,16 @@ const HorizontalScrollCarousel = () => {
         <motion.div style={{ x }} className="flex gap-4">
           {projectsData.map((project) => {
             return (
+             
+              
               <ProjectCard
                 key={project.id}
                 title={project.title}
                 description={project.description}
                 imgUrl={project.image}
                 gitUrl={project.gitUrl}
-                previewUrl={project.previewUrl}
               />
+             
             );
           })}
         </motion.div>

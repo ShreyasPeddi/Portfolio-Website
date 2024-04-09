@@ -1,21 +1,34 @@
-import React from "react";
-import { CodeBracketIcon, EyeIcon, LinkIcon } from "@heroicons/react/24/outline";
+import React, { useState } from "react";
+import { LinkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
-const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
+const ProjectCard = ({ imgUrl, title, description, gitUrl }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
-    <div className="max-w-max mx-10">
-      <div className="w-96 h-96 rounded-xl overflow-hidden relative group shadow-lg" style={{ backdropFilter: 'blur(4px)' }}>
-        <img src={imgUrl} alt={title}className="w-full h-full object-cover" />
-        <div className="overlay items-center justify-center absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500 ">
-          <Link href={gitUrl} target="_blank" className="h-14 w-14 mr-2 border-2 relative rounded-full border-[#ADB7BE] hover:border-white group/link">
-            <LinkIcon className="h-10 w-10 text-[#ADB7BE] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group-hover/link:text-white" />
-          </Link>
-        </div>
-      </div>
-      <div className="text-white rounded-b-xl mt-3 bg-[#181818] py-6 px-4">
-        <h5 className="text-xl font-semibold mb-2">{title}</h5>
-        <p className="text-[#ADB7BE]">{description}</p>
+    <div className="max-w-4xl mx-auto my-10">
+      <div
+        className="rounded-xl overflow-hidden shadow-lg relative w-[21rem] h-[16rem] sm:w-[30rem] sm:h-[18rem] md:w-[38rem] md:h-[22rem] lg:w-[44rem] lg:h-[28rem] xl:w-[52rem] xl:h-[33rem] 2xl:w-[56rem] 2xl:h-[37rem]"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        
+      >
+        <img src={imgUrl} alt={title} className="w-full h-full object-cover rounded-t-xl" />
+        {isHovered && (
+          <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50">
+            <div className="text-white text-center p-4">
+              <h3 className="text-lg font-semibold mb-2">{title}</h3>
+              <p className="text-gray-300 mb-2">{description}</p>
+              <Link href={gitUrl} passHref>
+                <span className="text-blue-500 hover:text-blue-700 cursor-pointer">
+                  <LinkIcon className="h-6 w-6" />
+                  Visit Project
+                </span>
+              </Link>
+            </div>
+          </div>
+        )}
+        
       </div>
     </div>
   );
