@@ -34,16 +34,20 @@ const EmailSection = () => {
                   className="w-8 h-13 md:w-10 md:h-13 py-2"
                 />
               </Link>
-            
-              <h2 className="text-black mt-2 lg:text-xl xl:text-2xl pl-2">
-                srpeddi@uwaterloo.ca
-              </h2>
 
+              <Link href="mailto:srpeddi@uwaterloo.ca">
+                <h2 className="text-black mt-2 lg:text-xl xl:text-2xl pl-2 hover:text-blue-400 hover:underline">
+                  srpeddi@uwaterloo.ca
+                </h2>
+              </Link>
             </div>
 
             <div className="xl:pl-5"></div>
             <div className="md:pt-2 flex flex-row gap-2 justify-center">
-              <Link href="https://www.linkedin.com/in/shreyaspeddi/" target="_blank">
+              <Link
+                href="https://www.linkedin.com/in/shreyaspeddi/"
+                target="_blank"
+              >
                 <Image
                   className="w-3/4 md:w-full"
                   src={LinkedinDarkIcon}
@@ -51,9 +55,15 @@ const EmailSection = () => {
                   alt="Linkedin Icon"
                 />
               </Link>
-              <h2 className="text-black mt-2 lg:text-xl xl:text-2xl pr-2">
-                LinkedIn
-              </h2>
+
+              <Link
+                href="https://www.linkedin.com/in/shreyaspeddi/"
+                target="_blank"
+              >
+                <h2 className="text-black mt-2 lg:text-xl xl:text-2xl pr-2 hover:text-blue-400 hover:underline">
+                  LinkedIn
+                </h2>
+              </Link>
             </div>
           </div>
         </div>
