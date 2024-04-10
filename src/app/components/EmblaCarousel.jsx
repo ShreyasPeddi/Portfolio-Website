@@ -87,14 +87,14 @@ const projectsData = [
     previewUrl: "/",
   },
 
-  {
-    id: 10,
-    title: "Fractal Patterns",
-    description: "Project 5 description",
-    image: "/images/projects/fractal.jpeg",
-    gitUrl: "https://github.com/ShreyasPeddi/Fractal-Patterns",
-    previewUrl: "/",
-  },
+//   {
+//     id: 10,
+//     title: "Fractal Patterns",
+//     description: "Project 5 description",
+//     image: "/images/projects/fractal.jpeg",
+//     gitUrl: "https://github.com/ShreyasPeddi/Fractal-Patterns",
+//     previewUrl: "/",
+//   },
 
   
 ];

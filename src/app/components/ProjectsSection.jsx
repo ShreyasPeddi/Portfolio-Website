@@ -6,7 +6,7 @@ import { useDrag } from "react-use-gesture";
 import { motion, useTransform, useScroll } from "framer-motion";
 
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import HorizontalScrollCarousel from "./HorizontalScrollCarousel";
+
 import EmblaCarousel from "./EmblaCarousel";
 
 
