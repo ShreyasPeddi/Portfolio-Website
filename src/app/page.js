@@ -33,11 +33,11 @@ export default function Home() {
       icon: "/images/companies/uwaterloo.png",
     },
     {
-      role: "Founder",
+      role: "Co-Founder",
       company: "WatGPT - UWaterloo's Generative AI team",
-      date: "Mar 2024 - Present",
+      date: "Sept 2023 - Present",
       description:
-        "Founder of WatGPT design team. Currently leading a team of 6 to build ML models and automate course recommendation processes for the entire Faculty of Engineering.",
+        "Leading teams to build LLMs and AI tools, improving student and faculty experiences at UWaterloo.",
       icon: "/images/companies/watgpt.png",
     },
     {
@@ -45,15 +45,15 @@ export default function Home() {
       company: "Northbridge Financial Corp.",
       date: "May 2023 - August 2023",
       description:
-        "Developed insurance solutions catering to customer base of over 10,000+ users",
+        "Developed insurance solutions catering to a customer base of over 10,000+ users.",
       icon: "/images/companies/nbfc.png",
     },
     {
-      role: "Machine Learning Researcher",
+      role: "Machine Learning Engineer",
       company: "Wat.AI - UWaterloo Artificial Intelligence Team",
       date: "March 2023 - December 2023",
       description:
-        "Created a sound anomaly detection system with Transformer models",
+        "Created a sound anomaly detection system with Transformer models.",
       icon: "/images/companies/watai.jpeg",
     },
     {
