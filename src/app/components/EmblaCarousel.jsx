@@ -8,7 +8,7 @@ const projectsData = [
     id: 1,
     title: "Solana Rewards",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pien, non fermentum ex interdum eget. ",
+      "A web app made entirely on the Solana blockchain. Users can fill out 2-5 minute surveys and earn free NFTs and tokens through airdrops",
     image: "/images/projects/SolanaRewards.png",
     gitUrl: "https://devpost.com/software/solana-rewards",
     previewUrl: "/",
@@ -17,7 +17,7 @@ const projectsData = [
     id: 2,
     title: "Liber: Hands-Free Social Media",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus, est quis mattis lobortis, tortor leo sodales libero, interdum eleifend turpis ipsum vitae sem. Mauris ullamcorper dui sapien, non fermentum ex interdum eget. Nam libero est, hendrerit eu sodales quis, iaculis eu risus. Nulla condimentum ex est, vel posuere nulla accumsan a. Nulla vel ex sed dolor porttitor faucibus eu vitae mi. Vestibulum eu laoreet nisi. Mauris volutpat mauris vel pulvinar gravida. Duis dignissim eget justo vel euismod. Proin erat justo, imperdiet et venenatis at, dignissim eget eros. Maecenas commodo mauris ac sapien sollicitudin hendrerit. Proin elementum, tortor hendrerit vulputate tempus, nisi felis hendrerit ligula, in rutrum ipsum augue ac lectus. Vestibulum finibus neque ut odio finibus, eu pulvinar odio sollicitudin. Phasellus quis nulla at odio auctor rhoncus. Nam condimentum accumsan efficitur. Quisque auctor nec ante eu facilisis.",
+      "Liber is an AI social media platform that allows users to interact with their friends and family without the need to touch their devices.",
     image: "/images/projects/Liber.png",
     gitUrl: "https://devpost.com/software/liber-hands-free",
     previewUrl: "/",
@@ -25,23 +25,23 @@ const projectsData = [
   {
     id: 3,
     title: "Blockaoke: Blockchain + Karaoke",
-    description: "Project 3 description",
+    description: "At Blockaoke, we blend blockchain and music to create an immersive web3 experience. We use Siamese Neural Networks to decide which cover song most closely resembles the original.",
     image: "/images/projects/Blockaoke.png",
     gitUrl: "https://ethglobal.com/showcase/blockaoke-unsoh",
     previewUrl: "/",
   },
   {
     id: 4,
-    title: "Guido: Autonomous Vacuum Cleaner",
-    description: "Project 4 description",
-    image: "/images/projects/Guido.jpg",
+    title: "WALL-E: Autonomous Vacuum Cleaner",
+    description: "This autonomous vacuum cleaner utilizes Arduino, ultrasonic sensors, and a suction system to navigate, detect, and collect small to medium-sized garbage while avoiding obstacles. Simplifying waste management and household chores with creativity and innovation.",
+    image: "/images/projects/walle.jpg",
     gitUrl: "https://github.com/ShreyasPeddi/Guido_SE101",
     previewUrl: "/",
   },
   {
     id: 5,
     title: "MedEx",
-    description: "Authentication and CRUD operations",
+    description: "Improving drug discovery process with Artifical Intelligence. Created a stacked super model that predicts the binding affinity of a drug to a protein target.",
     image: "/images/projects/pharmahacks.png",
     gitUrl: "https://github.com/ShreyasPeddi/pharmahacks2023-submission",
     previewUrl: "/",
@@ -51,18 +51,16 @@ const projectsData = [
     id: 6,
     title: "EQ",
     description:
-      "Uni Go is a platform that helps students find the right university for them. It provides a personalized experience for students to find the right university based on their preferences.",
+      "EQ tells you whether the person you are texting is “actually” angry, sad, happy or feeling any other 27 emotions. It also recommends a reply you can text back based on the mood of the person you are chatting with.",
     image: "/images/projects/EQ.png",
     gitUrl: "https://github.com/Vidhi-26/EQ",
     previewUrl: "/",
   },
 
-  
-
   {
     id: 7,
     title: "Notivity",
-    description: "Project 5 description",
+    description: "An advanced note-taking app for university students with various templates like Cornell Notes, Boxing Method, Chart, Outline and more. Users can also create their own custom templates.",
     image: "/images/projects/notivity.jpeg",
     gitUrl: "https://github.com/ShreyasPeddi/Notivity",
     previewUrl: "/",
@@ -71,7 +69,7 @@ const projectsData = [
   {
     id: 8,
     title: "Labyrinth Board Game",
-    description: "Project 5 description",
+    description: "Created the digital version of the Labryinth board game where players navigate through shifting mazes to reach their objectives",
     image: "/images/projects/labyrinth.jpeg",
     gitUrl: "https://github.com/ShreyasPeddi/Labyrinth-Board-Game",
     previewUrl: "/",
@@ -82,20 +80,10 @@ const projectsData = [
     title: "UniGo",
     description:
       "Uni Go is a platform that helps students find the right university for them. It provides a personalized experience for students to find the right university based on their preferences.",
-    image: "/images/projects/notivity.jpeg",
+    image: "/images/projects/unigo.jpeg",
     gitUrl: "https://github.com/ShreyasPeddi/UniGO",
     previewUrl: "/",
   },
-
-//   {
-//     id: 10,
-//     title: "Fractal Patterns",
-//     description: "Project 5 description",
-//     image: "/images/projects/fractal.jpeg",
-//     gitUrl: "https://github.com/ShreyasPeddi/Fractal-Patterns",
-//     previewUrl: "/",
-//   },
-
   
 ];
 const EmblaCarousel = () => {

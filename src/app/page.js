@@ -21,16 +21,24 @@ export default function Home() {
       company: "Gryd",
       date: "Jan 2024 - April 2024",
       description:
-        "Developed core features in GrydPark, Canada's first B2C/B2B Parking Marketplace and Management Platform",
-      icon: <FaCarAlt />,
+        "Developed core features for GrydPark, Canada's first B2C/B2B Parking Marketplace and Management Platform",
+      icon: "/images/companies/gryd.jpeg",
     },
     {
-      role: "Research Assistant",
-      company: "University of Waterloo, Dean's Office",
+      role: "Machine Learning Researcher",
+      company: "University of Waterloo, Dean's Office (WatGPT project)",
       date: "Mar 2024 - Present",
       description:
-        "Building an AI powered advising system for course recommendations and student advising",
-      icon: <FaUniversity />,
+        "Building ML models to automate course recommendation processes for the entire Faculty of Engineering.",
+      icon: "/images/companies/uwaterloo.png",
+    },
+    {
+      role: "Founder",
+      company: "WatGPT - UWaterloo's Generative AI team",
+      date: "Mar 2024 - Present",
+      description:
+        "Founder of WatGPT design team. Currently leading a team of 6 to build ML models and automate course recommendation processes for the entire Faculty of Engineering.",
+      icon: "/images/companies/watgpt.png",
     },
     {
       role: "Software Engineer Intern",
@@ -38,7 +46,7 @@ export default function Home() {
       date: "May 2023 - August 2023",
       description:
         "Developed insurance solutions catering to customer base of over 10,000+ users",
-      icon: <FaMoneyBill />,
+      icon: "/images/companies/nbfc.png",
     },
     {
       role: "Machine Learning Researcher",
@@ -46,7 +54,7 @@ export default function Home() {
       date: "March 2023 - December 2023",
       description:
         "Created a sound anomaly detection system with Transformer models",
-      icon: <GiArtificialIntelligence />,
+      icon: "/images/companies/watai.jpeg",
     },
     {
       role: "Software Developer Intern",
@@ -54,77 +62,10 @@ export default function Home() {
       date: "June 2021 - August 2021",
       description:
         "Worked on the SmartSchool platform, a SaaS product for schools and universities",
-      icon: <BiSolidSchool />,
+      icon: "/images/companies/dataready.png",
     },
   ];
-  const projectsData = [
-    {
-      id: 1,
-      title: "Solana Rewards",
-      description: "Project 1 description",
-      image: "/images/projects/SolanaRewards.png",
-      gitUrl: "https://devpost.com/software/solana-rewards",
-      previewUrl: "/",
-    },
-    {
-      id: 2,
-      title: "Liber: Hands-Free Social Media",
-      description: "Project 2 description",
-      image: "/images/projects/Liber.png",
-      gitUrl: "https://devpost.com/software/liber-hands-free",
-      previewUrl: "/",
-    },
-    {
-      id: 3,
-      title: "Blockaoke: Blockchain + Karaoke",
-      description: "Project 3 description",
-      image: "/images/projects/Blockaoke.png",
-      gitUrl: "https://ethglobal.com/showcase/blockaoke-unsoh",
-      previewUrl: "/",
-    },
-    {
-      id: 4,
-      title: "Guido: Autonomous Vacuum Cleaner",
-      description: "Project 4 description",
-      image: "/images/projects/Guido.jpg",
-      gitUrl: "https://github.com/ShreyasPeddi/Guido_SE101",
-      previewUrl: "/",
-    },
-    {
-      id: 5,
-      title: "Virtual Screening of Bioassay Data",
-      description: "Authentication and CRUD operations",
-      image: "/images/projects/fractal.jpeg",
-      gitUrl: "https://github.com/ShreyasPeddi/pharmahacks2023-submission",
-      previewUrl: "/",
-    },
-    {
-      id: 6,
-      title: "Fractal Patterns",
-      description: "Project 5 description",
-      image: "/images/projects/fractal.jpeg",
-      gitUrl: "https://github.com/ShreyasPeddi/Fractal-Patterns",
-      previewUrl: "/",
-    },
   
-    {
-      id: 7,
-      title: "Notivity",
-      description: "Project 5 description",
-      image: "/images/projects/notivity.jpeg",
-      gitUrl: "https://github.com/ShreyasPeddi/Notivity",
-      previewUrl: "/",
-    },
-  
-    {
-      id: 8,
-      title: "Labyrinth Board Game",
-      description: "Project 5 description",
-      image: "/images/projects/notivity.jpeg",
-      gitUrl: "https://github.com/ShreyasPeddi/Labyrinth-Board-Game",
-      previewUrl: "/",
-    },
-  ];
 
   const handleParticlesLoaded = () => {
     

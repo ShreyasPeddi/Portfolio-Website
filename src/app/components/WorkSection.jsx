@@ -16,8 +16,8 @@ const Timeline = ({ experiences }) => {
           <VerticalTimelineElement
             key={index}
             date={experience.date}
-            icon= {experience.icon}
-            iconStyle={{ background: '#1f2687', color: '#fff' }}
+            icon={<img src={experience.icon} alt="Icon" style={{ width: '100%', height: '100%', borderRadius: '50%' }} />}
+            iconStyle={{ background: '#ffffff', color: '#fff' }}
             className={index % 2 === 0 ? 'left-timeline opacity-100' : 'right-timeline opacity-100'} // Apply alternate styling based on index
             contentStyle={{ background: 'rgba(49, 54, 63, 0.5)', color: '#fff', boxShadow: '0 8px 32px 0 rgba( 31, 38, 135, 0.37 )', backdropFilter: 'blur(4px)', borderRadius: '10px' }}
           >

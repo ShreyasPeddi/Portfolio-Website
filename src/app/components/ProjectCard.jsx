@@ -19,11 +19,11 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl }) => {
         
         <div className="hidden group-hover:flex ml-10 rounded-xl absolute top-0 left-0 w-full h-full items-center justify-center bg-black bg-opacity-70 px-10">
           <div className="text-white text-center p-4 mr-8">
-            <h3 className="text-lg font-semibold mb-2">{title}</h3>
-            <p className="text-gray-300 mb-2">{description}</p>
+            <h3 className="text-sm lg:text-lg font-semibold mb-2">{title}</h3>
+            <p className="text-gray-300 mb-2 text-xs lg:text-md xl:text-lg">{description}</p>
             <Link href={gitUrl} passHref target="_blank">
               <span className="text-blue-500 hover:text-blue-700 cursor-pointer">
-                <div className="flex items-center justify-center gap-2">
+                <div className="flex items-center justify-center gap-2 text-sm lg:text-lg">
                   <LinkIcon className="h-6 w-6" />
                   Visit Project
                 </div>
