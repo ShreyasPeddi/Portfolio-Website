@@ -1,19 +1,20 @@
 "use client";
-import React, { useEffect, useState, Suspense } from "react";
-import dynamic from "next/dynamic";
+import React, { useEffect, useState } from "react";
+import HeroSection from "./components/HeroSection";
+import AboutSection from "./components/AboutSection";
+import ProjectsSection from "./components/ProjectsSection";
+import EmailSection from "./components/EmailSection";
+import Timeline from "./components/WorkSection";
+import ParticlesContainer from "./components/ParticlesContainer";
+import { FaCarAlt, FaUniversity, FaMoneyBill } from "react-icons/fa";
+import { GiArtificialIntelligence } from "react-icons/gi";
+import { BiSolidSchool } from "react-icons/bi";
 import PropagateLoader from "react-spinners/PropagateLoader";
 
-// Dynamically import components with lazy loading
-const HeroSection = dynamic(() => import("./components/HeroSection"));
-const AboutSection = dynamic(() => import("./components/AboutSection"));
-const ProjectsSection = dynamic(() => import("./components/ProjectsSection"));
-const EmailSection = dynamic(() => import("./components/EmailSection"));
-const Timeline = dynamic(() => import("./components/WorkSection"));
-const ParticlesContainer = dynamic(() => import("./components/ParticlesContainer"), { ssr: false });
 
 export default function Home() {
+  
   const [loading, setLoading] = useState(true);
-
   const experiences = [
     {
       role: "Software Engineer Intern",
@@ -64,42 +65,34 @@ export default function Home() {
       icon: "/images/companies/dataready.png",
     },
   ];
+  
 
   const handleParticlesLoaded = () => {
+    
     setLoading(false);
   };
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 3000); // Fallback after 3 seconds
-
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <main className="flex min-h-screen flex-col bg-[#121212] mx-auto">
-      <Suspense fallback={<div>Loading...</div>}>
-        <ParticlesContainer onParticlesLoaded={handleParticlesLoaded} />
-      </Suspense>
-      
+      <ParticlesContainer onParticlesLoaded={handleParticlesLoaded} />
       {loading ? (
         <div className="flex justify-center items-center h-screen">
           <PropagateLoader
-            color="#fff"
+          // white color
+            color="#fff"     
             loading={loading}
             size={20}
           />
         </div>
-      ) : (
+      ):
+      (
         <>
           <div style={{ position: "relative", width: "100%", height: "100vh" }}>
-            <Suspense fallback={<div>Loading...</div>}>
-              <HeroSection style={{ zIndex: 10 }} />
-            </Suspense>
+            <HeroSection style={{ zIndex: 10 }} /> {/* Set higher zIndex */}
           </div>
 
           <div
+            className
             style={{
               background:
                 "radial-gradient(rgba(27, 27, 27, 0.9),rgba(27, 27, 27, 0.9))",
@@ -107,10 +100,9 @@ export default function Home() {
               position: "relative",
             }}
           >
+            {/* <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-1/5 -left-4 transform -translate-x-1/2 -translate-1/2"></div> */}
             <div className="container mt-24 mx-auto px-2 md:px-12 py-4">
-              <Suspense fallback={<div>Loading...</div>}>
-                <AboutSection />
-              </Suspense>
+              <AboutSection />
             </div>
           </div>
 
@@ -123,9 +115,7 @@ export default function Home() {
             }}
           >
             <div className="container mt-30 mb-24 py-10 mx-auto px-6 md:px-12">
-              <Suspense fallback={<div>Loading...</div>}>
-                <Timeline experiences={experiences} />
-              </Suspense>
+              <Timeline experiences={experiences} />
             </div>
           </div>
 
@@ -138,9 +128,7 @@ export default function Home() {
             }}
           >
             <div className="mt-28 mb-20 mx-auto py-4">
-              <Suspense fallback={<div>Loading...</div>}>
-                <ProjectsSection />
-              </Suspense>
+            <ProjectsSection />
             </div>
           </div>
 
@@ -153,9 +141,7 @@ export default function Home() {
             }}
           >
             <div className="container mt-24 mx-auto px-6 md:px-12 py-4">
-              <Suspense fallback={<div>Loading...</div>}>
-                <EmailSection />
-              </Suspense>
+              <EmailSection />
             </div>
           </div>
         </>
