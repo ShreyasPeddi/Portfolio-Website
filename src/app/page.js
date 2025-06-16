@@ -11,11 +11,25 @@ import { GiArtificialIntelligence } from "react-icons/gi";
 import { BiSolidSchool } from "react-icons/bi";
 import PropagateLoader from "react-spinners/PropagateLoader";
 
-
 export default function Home() {
-  
   const [loading, setLoading] = useState(true);
   const experiences = [
+    {
+      role: "Software Engineer Intern",
+      company: "Coinbase",
+      date: "May 2025 - Aug 2025",
+      description:
+        "Implementing mission-critical development initiatives for the new Coinbase Wallet app",
+      icon: "/images/companies/coinbase.jpeg",
+    },
+    {
+      role: "Software Engineer Intern",
+      company: "Super.com",
+      date: "Sept 2024 - Dec 2024",
+      description:
+        "Developed powerful internal tools that enabled the engineering teams at Super to scale operations",
+      icon: "/images/companies/super.jpeg",
+    },
     {
       role: "Software Engineer Intern",
       company: "Gryd",
@@ -41,6 +55,15 @@ export default function Home() {
       icon: "/images/companies/watgpt.png",
     },
     {
+      role: "Blockchain Engineering Fellow",
+      company: "Solana Labs",
+      date: "Sept 2023 - Dec 2023",
+      description:
+        "Chosen as one of 100 students worldwide for the Global Engineering Fellowship. Attended the Breakpoint 2023 blockchain conference in Amsterdam, Netherlands",
+      icon: "/images/companies/solana.jpeg",
+    },
+
+    {
       role: "Software Engineer Intern",
       company: "Northbridge Financial Corp.",
       date: "May 2023 - August 2023",
@@ -56,19 +79,9 @@ export default function Home() {
         "Created a sound anomaly detection system with Transformer models.",
       icon: "/images/companies/watai.jpeg",
     },
-    {
-      role: "Software Developer Intern",
-      company: "DataReady Technology",
-      date: "June 2021 - August 2021",
-      description:
-        "Worked on the SmartSchool platform, a SaaS product for schools and universities",
-      icon: "/images/companies/dataready.png",
-    },
   ];
-  
 
   const handleParticlesLoaded = () => {
-    
     setLoading(false);
   };
 
@@ -78,14 +91,13 @@ export default function Home() {
       {loading ? (
         <div className="flex justify-center items-center h-screen">
           <PropagateLoader
-          // white color
-            color="#fff"     
+            // white color
+            color="#fff"
             loading={loading}
             size={20}
           />
         </div>
-      ):
-      (
+      ) : (
         <>
           <div style={{ position: "relative", width: "100%", height: "100vh" }}>
             <HeroSection style={{ zIndex: 10 }} /> {/* Set higher zIndex */}
@@ -128,7 +140,7 @@ export default function Home() {
             }}
           >
             <div className="mt-28 mb-20 mx-auto py-4">
-            <ProjectsSection />
+              <ProjectsSection />
             </div>
           </div>
 
