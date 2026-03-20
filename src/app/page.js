@@ -118,7 +118,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div
+          {/* <div
             style={{
               background:
                 "radial-gradient(rgba(18, 18, 18, 0.9),rgba(18, 18, 18, 0.9))",
@@ -129,9 +129,9 @@ export default function Home() {
             <div className="container mt-30 mb-24 py-10 mx-auto px-6 md:px-12">
               <Timeline experiences={experiences} />
             </div>
-          </div>
+          </div> */}
 
-          <div
+          {/* <div
             style={{
               background:
                 "radial-gradient(rgba(27, 27, 27, 0.9),rgba(27, 27, 27, 0.9))",
@@ -142,7 +142,7 @@ export default function Home() {
             <div className="mt-28 mb-20 mx-auto py-4">
               <ProjectsSection />
             </div>
-          </div>
+          </div> */}
 
           <div
             style={{

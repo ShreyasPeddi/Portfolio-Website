@@ -45,13 +45,13 @@ const AboutSection = () => {
               style={paragraphStyle}
               className="text-base lg:text-xl mt-8 font-sans text-wrap text-pretty text-base/loose"
             >
-              I am a Software Engineering student at the University of Waterloo.
-              I am passionate about building software that solves real-world
-              problems. I have interned at various companies, started an AI
-              design team at UWaterloo, participated and won hackathons, and
-              attended international conferences like Solana Breakpoint.
-              I&apos;m currently looking for 2026 internship opportunities. Feel
-              free to reach out at srpeddi@uwaterloo.ca.
+              I am a Software Engineering student at the University of Waterloo
+              pursuing AI specialization. I am passionate about building
+              software that solves real-world problems. I have interned at
+              various companies, started an AI design team at UWaterloo,
+              participated and won hackathons, and attended international
+              conferences like Solana Breakpoint. Feel free to reach out at
+              srpeddi@uwaterloo.ca.
             </p>
           </div>
         </div>
